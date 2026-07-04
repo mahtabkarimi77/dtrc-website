@@ -2,7 +2,7 @@
 
 
 .hero {
-    min-height: 68vh;
+    min-height: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
