@@ -1,0 +1,92 @@
+/* hero-typography.css - Typography & Content Styling Only */
+/* DTRC - Premium Research Institute Hero */
+
+.hero__badge {
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    line-height: 1;
+    color:#55D6FF;
+}
+
+.hero__title {
+    font-size: clamp(56px, 6.8vw, 64px);
+    line-height: 1.08;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    color:#F8FBFF;
+}
+
+
+.hero__subtitle {
+    font-size: 19px;
+    line-height: 1.68;
+    font-weight: 400;
+    max-width: 560px;
+    color:#B8C7D9;
+}
+
+/* CTA Buttons Typography */
+.hero__ctas .btn {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.btn--primary,
+.btn--secondary {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Statistics Typography */
+.hero__stats {
+    font-size: 1rem;
+}
+
+.stat__number {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color:#39D5FF;
+}
+
+.stat__label {
+    font-size: 0.96rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
+    color:#39D5FF;
+}
+
+
+/* Responsive Typography Scaling */
+@media (max-width: 1200px) {
+    .hero__title {
+        font-size: clamp(52px, 6.5vw, 60px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero__title {
+        font-size: clamp(46px, 7vw, 54px);
+    }
+    
+    .hero__subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: clamp(42px, 7.5vw, 48px);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__title {
+        font-size: clamp(38px, 8vw, 44px);
+    }
+}

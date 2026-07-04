@@ -1,0 +1,106 @@
+/* hero-layout.css - Pure Layout for DTRC Hero */
+
+
+.hero {
+    min-height: 68vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__container {
+    max-width: 1400px;
+    margin-inline: auto;
+    width: 100%;
+    padding: 0 64px;
+    display: grid;
+    grid-template-columns: 44% 56%;
+    gap: 96px;
+    align-items: center;
+    transform: translateY(0px);
+}
+
+/* LEFT CONTENT */
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 620px;
+}
+
+/* RIGHT VISUAL */
+.hero__visual {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   /* padding-bottom: 70px;*/
+}
+
+/* CTAs & STATS */
+.hero__ctas {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.hero__stats {
+    display: flex;
+    gap: 4rem;
+}
+
+
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1200px) {
+    .hero__container {
+        padding: 0 48px;
+        gap: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero__container {
+        padding: 0 32px;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+    
+    .hero__content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__container {
+        padding: 0 20px;
+        gap: 50px;
+    }
+    
+    .hero__ctas {
+        justify-content: center;
+    }
+    
+    .hero__stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__container {
+        padding: 0 20px;
+    }
+    
+    .hero__ctas {
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .hero__stats {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+    }
+}

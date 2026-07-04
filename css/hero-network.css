@@ -1,0 +1,125 @@
+```css
+/* hero-network.css - Technology Network Styling Only */
+
+.hero__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__technology-network {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Technology Nodes */
+.tech-node {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 8px 28px rgba(0, 0, 0, 0.18),
+        inset 0 0 16px rgba(0, 200, 215, 0.25);
+    border: 2px solid rgba(0, 200, 215, 0.4);
+}
+
+/* Node Icons */
+.tech-node__icon {
+    width: 24px;
+    height: 24px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+/* Node Labels */
+.tech-node__label {
+    font-size: 0.90rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0 8px;
+
+    background: linear-gradient(
+        90deg,
+        #C084FC,
+        #A855F7,
+        #D946EF,
+        #A855F7,
+        #C084FC
+    );
+
+    background-size: 300% 300%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    animation: labelGradient 12s linear infinite;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0 8px;
+}
+
+/* Specific Node Styles */
+.tech-node--ai {
+    width: 5px;
+    height: 5px;
+}
+
+.tech-node--iiot {
+    width: 5px;
+    height: 5px;
+}
+
+.tech-node--digital-twin {
+    width: 5px;
+    height: 5px;
+}
+
+.tech-node--smart-manufacturing {
+    width: 5px;
+    height: 5px;
+}
+
+.tech-node--data-analytics {
+    width: 5px;
+    height: 5px;
+}
+
+.tech-node--cybersecurity {
+    width: 5px;
+    height: 5px;
+}
+
+.tech-node--robotics {
+    width: 5px;
+    height: 5px;
+    
+}
+@keyframes labelGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+
+}

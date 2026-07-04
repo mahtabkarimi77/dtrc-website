@@ -1,0 +1,191 @@
+/* ================================================
+   hero-animation.css
+   National Digital Transformation Research Center (DTRC)
+   Animation, transitions & interaction states only
+   Preserves all previous design decisions from:
+   - hero-layout.css
+   - hero-typography.css
+   - hero-background.css
+   - hero-network.css
+   - hero-responsive.css
+   ================================================ */
+
+/* ======================
+   GLOBAL TRANSITION SETTINGS
+   ====================== */
+.hero * {
+  transition: opacity 250ms ease-out,
+              transform 250ms ease-out,
+              background-color 200ms ease-out,
+              border-color 200ms ease-out,
+              color 200ms ease-out,
+              box-shadow 220ms ease-out;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ======================
+   BUTTON STATES
+   ====================== */
+.hero-cta .btn,
+.hero-cta .btn-secondary {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta .btn:hover,
+.hero-cta .btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.18);
+}
+
+.hero-cta .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta .btn-secondary:hover,
+.hero-cta .btn-secondary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-cta .btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Focus ring for accessibility */
+.hero-cta .btn:focus-visible,
+.hero-cta .btn-secondary:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 4px;
+}
+
+/* ======================
+   TECHNOLOGY NETWORK NODES
+   ====================== */
+.tech-node {
+  transition: transform 280ms ease-out,
+              opacity 220ms ease-out,
+              box-shadow 260ms ease-out;
+}
+
+.tech-node:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.12);
+  z-index: 10;
+}
+
+.tech-node:active {
+  transform: scale(1.05);
+}
+
+/* Connection lines (if present in hero-network.css) */
+.tech-connection {
+  transition: stroke 300ms ease-out,
+              opacity 250ms ease-out;
+}
+
+.tech-network-container:hover .tech-connection {
+  opacity: 0.85;
+}
+
+
+/* ======================
+   UTILITY CLASSES FOR JS CONTROL
+   ====================== */
+
+/* Fade in / visibility */
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.is-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+/* Staggered entrance support */
+.is-enter {
+  opacity: 1;
+  transform: none;
+}
+
+/* Exit state */
+.is-leaving {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+/* Active state for interactive elements */
+.is-active {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Subtle lift for cards/stats on interaction */
+.stat-item.is-active {
+  transform: translateY(-4px);
+}
+
+/* ======================
+   HERO SECTION LEVEL ANIMATIONS
+   ====================== */
+
+/* Gentle background depth on hover/focus */
+.hero:hover .hero-background-overlay {
+  opacity: 0.92;
+}
+
+/* Content container subtle response */
+.hero-content:hover {
+  transform: translateX(2px);
+}
+
+/* Prevent transition on layout changes */
+.hero-grid,
+.hero-content,
+.hero-visualization,
+.tech-network-container {
+  transition: none;
+}
+
+/* ======================
+   PERFORMANCE & ACCESSIBILITY SAFEGUARDS
+   ====================== */
+
+/* GPU acceleration for transforms */
+.hero-cta .btn,
+.hero-cta .btn-secondary,
+.tech-node{
+
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Reduce motion for non-essential elements */
+@media (prefers-reduced-motion: reduce) {
+  .tech-node:hover,
+  .hero-cta .btn:hover,
+  .hero-cta .btn-secondary:hover {
+    transform: none !important;
+  }
+}
+
+/* Keyboard navigation support */
+@media (hover: none) {
+  .hero-cta .btn,
+  .hero-cta .btn-secondary {
+    transition-duration: 180ms;
+  }
+}

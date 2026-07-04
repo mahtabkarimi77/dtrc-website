@@ -1,0 +1,195 @@
+/* header.css - DTRC Premium Header */
+/* Inspired by Digital Catapult, IBM Research & NVIDIA */
+
+:root {
+    --primary-blue: #0a2540;
+    --accent-teal: #00d4c8;
+    --text-dark: #1a1a1a;
+    --shadow: 0 4px 20px rgba(10, 37, 64, 0.12);
+    --transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    --radius: 50px;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+
+    background:#C9DCEB;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    transition:var(--transition);
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow);
+}
+
+/* HEADER CONTAINER */
+.header__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand__logo {
+    background: var(--primary-blue);
+    color: white;
+    font-size: 1.65rem;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 8px;
+    letter-spacing: -0.04em;
+}
+
+.brand__name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+/* NAVIGATION */
+.nav__list {
+    display: flex;
+    gap: 2.8rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    position: relative;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: var(--transition);
+    padding-bottom: 4px;
+}
+
+.nav__link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-teal);
+    transition: var(--transition);
+}
+
+.nav__link:hover:after {
+    width: 100%;
+}
+
+/* ACTIONS */
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.btn--primary {
+    background: var(--accent-teal);
+    color: white;
+    padding: 12px 32px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.97rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 212, 200, 0.25);
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 212, 200, 0.35);
+}
+
+/* MOBILE TOGGLE */
+.header__mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--primary-blue);
+    position: relative;
+    transition: var(--transition);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: var(--transition);
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { bottom: -7px; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .nav__list {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav__list {
+        display: none;
+    }
+    
+    .header__mobile-toggle {
+        display: block;
+    }
+    
+    .brand__name {
+        display: none;
+    }
+}
+/* تمام لینک‌های هدر */
+.header a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* لینک‌های منو */
+.nav__link{
+    transition:.3s ease;
+    font-weight:500;
+}
+
+/* هنگام Hover */
+.nav__link:hover{
+    color:#00CFC8;
+}
