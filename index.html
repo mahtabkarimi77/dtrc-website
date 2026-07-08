@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
 
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/hero-layout.css">
     <link rel="stylesheet" href="css/hero-background.css">
     <link rel="stylesheet" href="css/hero-typography.css">
@@ -15,16 +16,21 @@
     <link rel="stylesheet" href="css/hero-network.css">
     <link rel="stylesheet" href="css/hero-responsive.css">
     <link rel="stylesheet" href="css/hero-animation.css">
-
-
+    
     <link rel="stylesheet" href="css/capabilities.css">
+
+
+    <link rel="stylesheet" href="css/researchExcellence.css">
+
+
     <link rel="stylesheet" href="css/footer.css">
+
 </head>
 <body>
 <!-- HEADER -->
 <header class="header" role="banner">
     <div class="header__container">
-        
+       
         <!-- BRAND -->
         <div class="header__brand">
             <a href="./index.html" class="brand" aria-label="DTRC Homepage">
@@ -52,23 +58,22 @@
 
         <!-- ACTIONS -->
         <div class="header__actions">
-            <a href="#partnership" 
-               class="btn btn--primary" 
+            <a href="#partnership"
+               class="header__btn"
                role="button"
                aria-label="Become a partner with DTRC">
                 Partner With Us
             </a>
-            
+           
             <!-- Mobile Menu Button -->
-            <button 
-                class="header__mobile-toggle" 
+            <button
+                class="header__mobile-toggle"
                 aria-label="Toggle navigation menu"
                 aria-expanded="false"
                 aria-controls="main-nav">
                 <span class="hamburger" aria-hidden="true"></span>
             </button>
         </div>
-
     </div>
 </header>
 
@@ -176,68 +181,149 @@
 
     </div>
 </section>
+
+
+
     <!-- CORE CAPABILITIES -->
-    <section class="capabilities" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-header__title">Core Capabilities</h2>
-                <p class="section-header__subtitle">Comprehensive expertise across the digital transformation ecosystem</p>
-            </div>
-            
-            <div class="capabilities__grid">
-                <!-- Consulting Card -->
-                <div class="capability-card">
-                    <div class="capability-card__icon"></div>
-                    <h3 class="capability-card__title">Consulting</h3>
-                    <p class="capability-card__desc">Strategic guidance for organizations embarking on digital transformation journeys.</p>
-                    <a href="#" class="capability-card__link">Learn more</a>
-                </div>
-                
-                <!-- Partnership Card -->
-                <div class="capability-card">
-                    <div class="capability-card__icon"></div>
-                    <h3 class="capability-card__title">Partnership</h3>
-                    <p class="capability-card__desc">Collaborative research and co-innovation with industry leaders.</p>
-                    <a href="#" class="capability-card__link">Learn more</a>
-                </div>
-                
-                <!-- Innovation & Platform Card -->
-                <div class="capability-card">
-                    <div class="capability-card__icon"></div>
-                    <h3 class="capability-card__title">Innovation &amp; Platform</h3>
-                    <p class="capability-card__desc">Advanced digital platforms and breakthrough technology solutions.</p>
-                    <a href="#" class="capability-card__link">Learn more</a>
-                </div>
-                
-                <!-- Academy Card -->
-                <div class="capability-card">
-                    <div class="capability-card__icon"></div>
-                    <h3 class="capability-card__title">Academy</h3>
-                    <p class="capability-card__desc">World-class training and education programs for digital leaders.</p>
-                    <a href="#" class="capability-card__link">Learn more</a>
-                </div>
-                
-                <!-- News Card -->
-                <div class="capability-card">
-                    <div class="capability-card__icon"></div>
-                    <h3 class="capability-card__title">News</h3>
-                    <p class="capability-card__desc">Stay updated with the latest research breakthroughs and events.</p>
-                    <a href="#" class="capability-card__link">Learn more</a>
-                </div>
-                
-                <!-- Contact Card -->
-                <div class="capability-card">
-                    <div class="capability-card__icon"></div>
-                    <h3 class="capability-card__title">Contact</h3>
-                    <p class="capability-card__desc">Connect with our experts and explore collaboration opportunities.</p>
-                    <a href="#" class="capability-card__link">Learn more</a>
-                </div>
-            </div>
+<section class="capabilities" aria-labelledby="capabilities-title">
+  <div class="capabilities__container">
+    <!-- Section Header -->
+<!-- Section Header -->
+<header class="capabilities__header">
+
+    <!-- Left Column -->
+    <div class="capabilities__header-left">
+
+        <span class="section-header__eyebrow">
+            Research • Industry • Innovation
+        </span>
+
+        <h2 id="capabilities-title" class="section-header__title">
+            What We Do
+        </h2>
+
+    </div>
+
+    <!-- Right Column -->
+    <div class="capabilities__header-right">
+
+        <p class="section-header__subtitle">
+           Bridging academia and industry through research, innovation, consulting, and professional education.
+        </p>
+
+    </div>
+
+</header>
+
+    <!-- Capabilities Grid -->
+    <div class="capabilities__grid">
+      
+      <!-- Card 1: Research & Innovation -->
+      <article class="capability-card">
+        <div class="capability-card__icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 3V5M15 3V5M9 19V21M15 19V21M5 9H3M19 9H21M5 15H3M19 15H21M7 19H17C18.1046 19 19 18.1046 19 17V7C19 5.89543 18.1046 5 17 5H7C5.89543 5 5 5.89543 5 7V17C5 18.1046 5.89543 19 7 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-    </section>
+        <div class="capability-card__content">
+          <h3 class="capability-card__title">Research &amp; Innovation</h3>
+          <p class="capability-card__description">
+            Conducting applied research in AI, IIoT, digital twins, and smart manufacturing to transform scientific breakthroughs into practical industrial solutions.
+          </p>
+          <a href="#" class="capability-card__link" aria-label="Learn more about Research &amp; Innovation">Explore</a>
+        </div>
+      </article>
+
+      <!-- Card 2: Industrial Consulting -->
+      <article class="capability-card">
+        <div class="capability-card__icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21M9 7H15M9 11H15M9 15H13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="capability-card__content">
+          <h3 class="capability-card__title">Industrial Consulting</h3>
+          <p class="capability-card__description">
+            Providing expert guidance for digital transformation strategies, technology roadmaps, and implementation support tailored to industrial needs.
+          </p>
+          <a href="#" class="capability-card__link" aria-label="Learn more about Industrial Consulting">Explore</a>
+        </div>
+      </article>
+
+      <!-- Card 3: Industry Collaboration -->
+      <article class="capability-card">
+        <div class="capability-card__icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 21V13C17 11.8954 16.1046 11 15 11H9C7.89543 11 7 11.8954 7 13V21M7 3H17M12 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="capability-card__content">
+          <h3 class="capability-card__title">Industry Collaboration</h3>
+          <p class="capability-card__description">
+            Building strategic partnerships between academia, research institutes, government, and industry to drive collective innovation and knowledge exchange.
+          </p>
+          <a href="#" class="capability-card__link" aria-label="Learn more about Industry Collaboration">Explore</a>
+        </div>
+      </article>
+
+      <!-- Card 4: Professional Academy -->
+      <article class="capability-card">
+        <div class="capability-card__icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6.253V19M12 6.253L19.5 3.75L12 1.25L4.5 3.75L12 6.253Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 19L4.5 16.25V9.75L12 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 19L19.5 16.25V9.75L12 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="capability-card__content">
+          <h3 class="capability-card__title">Professional Academy</h3>
+          <p class="capability-card__description">
+            Delivering executive education, specialized workshops, certification programs, and professional development for engineers, managers, and researchers.
+          </p>
+          <a href="#" class="capability-card__link" aria-label="Learn more about Professional Academy">Explore</a>
+        </div>
+      </article>
+
+      <!-- Card 5: Digital Platforms -->
+      <article class="capability-card">
+        <div class="capability-card__icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7M3 7L12 12L21 7M3 7L12 2L21 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="capability-card__content">
+          <h3 class="capability-card__title">Digital Platforms</h3>
+          <p class="capability-card__description">
+            Designing and developing intelligent digital platforms, AI-powered systems, industrial software, and smart infrastructure for the future of manufacturing.
+          </p>
+          <a href="#" class="capability-card__link" aria-label="Learn more about Digital Platforms">Explore</a>
+        </div>
+      </article>
+
+      <!-- Card 6: Technology Transfer -->
+      <article class="capability-card">
+        <div class="capability-card__icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="capability-card__content">
+          <h3 class="capability-card__title">Technology Transfer</h3>
+          <p class="capability-card__description">
+            Accelerating the journey from laboratory research to industrial application through commercialization, startup incubation, and innovation projects.
+          </p>
+          <a href="#" class="capability-card__link" aria-label="Learn more about Technology Transfer">Explore</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
 
     <!-- STATISTICS -->
-    <section class="statistics" aria-labelledby="stats-heading">
+ <!--   <section class="statistics" aria-labelledby="stats-heading">
         <div class="container">
             <div class="section-header">
                 <h2 id="stats-heading" class="section-header__title">Our Impact</h2>
@@ -266,49 +352,69 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- FEATURED RESEARCH -->
-    <section class="featured-research" id="innovation">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-header__title">Featured Research</h2>
-                <p class="section-header__subtitle">Pioneering projects shaping the future of digital transformation</p>
+
+
+<!-- Research Excellence -->
+
+<section class="research-overview" aria-labelledby="research-overview-title">
+
+    <div class="research-overview__container">
+
+        <!-- Content -->
+        <div class="research-overview__content">
+
+            <!-- Left Column -->
+            <div class="research-overview__text">
+
+                <p class="research-overview__eyebrow">
+                    Research Excellence
+                </p>
+
+                <h2 id="research-overview-title"
+                    class="research-overview__title">
+
+                    Advancing Applied Research for Digital Transformation
+
+                </h2>
+
+                <p class="research-overview__description">
+
+                    DTRC conducts applied research in Artificial Intelligence,
+                    Industrial IoT, Digital Twins, Smart Manufacturing,
+                    Cybersecurity and Data Analytics to accelerate digital
+                    transformation across academia and industry.
+
+                </p>
+
+                <a href="research.html"
+                   class="research-overview__button">
+
+                    Learn More
+
+                </a>
+
             </div>
-            
-            <div class="projects__grid">
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-card__image"></div>
-                    <div class="project-card__content">
-                        <h3 class="project-card__title">National Digital Twin Platform</h3>
-                        <p class="project-card__desc">Real-time virtual modeling for smart manufacturing and urban planning.</p>
-                        <a href="#" class="project-card__button">Read Case Study</a>
-                    </div>
-                </article>
-                
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-card__image"></div>
-                    <div class="project-card__content">
-                        <h3 class="project-card__title">Ethical AI Framework</h3>
-                        <p class="project-card__desc">Developing responsible and transparent artificial intelligence systems for industry.</p>
-                        <a href="#" class="project-card__button">Read Case Study</a>
-                    </div>
-                </article>
-                
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <div class="project-card__image"></div>
-                    <div class="project-card__content">
-                        <h3 class="project-card__title">Industrial IoT Ecosystem</h3>
-                        <p class="project-card__desc">Secure and scalable connectivity solutions for next-generation factories.</p>
-                        <a href="#" class="project-card__button">Read Case Study</a>
-                    </div>
-                </article>
-            </div>
+
+            <!-- Right Column -->
+            <figure class="research-overview__media">
+
+                <img
+                    class="research-overview__image"
+                    src="images/image1.JPG"
+                    alt="Researchers collaborating on digital transformation projects at DTRC laboratory"
+                    width="800"
+                    height="600">
+
+            </figure>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
+
 
     <!-- INDUSTRY PARTNERS -->
     <section class="partners" id="partnership">
@@ -422,6 +528,7 @@
             </div>
         </div>
     </footer>
+
 <script src="js/header.js"></script>
 <script src="js/hero.js"></script>
 <script src="js/main.js"></script>
