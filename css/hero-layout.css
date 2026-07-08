@@ -2,24 +2,28 @@
 
 
 .hero {
-    min-height: auto;
-    overflow: hidden;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding-top:clamp(50px,8vw,70px);
 }
 
 .hero__container {
-    max-width: 1400px;
-    margin-inline: auto;
+    padding-top:clamp(72px,8vw,96px);
+    max-width: 1280px;
     width: 100%;
-    padding: 0 64px;
+    margin-inline: auto;
+
+    padding-inline: clamp(20px,4vw,48px);
+
     display: grid;
-    grid-template-columns: 44% 56%;
-    gap: 96px;
+    grid-template-columns: 46% 54%;
+    gap:clamp(40px,5vw,72px);
+
     align-items: center;
-    transform: translateY(0px);
+
+    transform: translateY(0);
 }
 
 /* LEFT CONTENT */
@@ -27,80 +31,134 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 620px;
+    max-width:min(560px,100%);
+    gap: 12px;
 }
 
 /* RIGHT VISUAL */
 .hero__visual {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-   /* padding-bottom: 70px;*/
+    align-items:center;
+    
+
 }
 
 /* CTAs & STATS */
 .hero__ctas {
     display: flex;
-    gap: 1.25rem;
+    gap:clamp(.8rem,2vw,1.25rem);
+    margin-top:8px;
 }
 
 .hero__stats {
     display: flex;
-    gap: 4rem;
+    gap:clamp(1.5rem,4vw,3rem);
 }
 
 
+/* =====================================================
+   RESPONSIVE LAYOUT
+   Desktop First (1920px → 360px)
+===================================================== */
 
-/* RESPONSIVE LAYOUT */
-@media (max-width: 1200px) {
-    .hero__container {
-        padding: 0 48px;
-        gap: 80px;
+/* ---------- Large Laptop ---------- */
+@media (max-width:1200px){
+
+    .hero__container{
+
+        grid-template-columns:48% 52%;
+
     }
+
 }
 
-@media (max-width: 992px) {
-    .hero__container {
-        padding: 0 32px;
-        grid-template-columns: 1fr;
-        gap: 60px;
-        text-align: center;
+/* ---------- Tablet ---------- */
+@media (max-width:992px){
+
+    .hero__container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        justify-items:center;
+
+        align-items:center;
+
     }
-    
-    .hero__content {
-        max-width: 100%;
-        margin: 0 auto;
+
+    .hero__content{
+
+        max-width:100%;
+
+        margin-inline:auto;
+
     }
+
+    .hero__visual{
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        margin-inline:auto;
+
+    }
+
 }
 
-@media (max-width: 768px) {
-    .hero__container {
-        padding: 0 20px;
-        gap: 50px;
+/* ---------- Mobile Landscape ---------- */
+@media (max-width:768px){
+
+    .hero__ctas{
+
+        justify-content:center;
+
     }
-    
-    .hero__ctas {
-        justify-content: center;
+
+    .hero__stats{
+
+        justify-content:center;
+
     }
-    
-    .hero__stats {
-        justify-content: center;
-    }
+
 }
 
-@media (max-width: 576px) {
-    .hero__container {
-        padding: 0 20px;
+/* ---------- Mobile ---------- */
+@media (max-width:576px){
+
+    .hero__ctas{
+
+        flex-direction:column;
+
+        align-items:center;
+
     }
-    
-    .hero__ctas {
-        flex-direction: column;
-        align-items: start;
+
+    .hero__stats{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:2rem;
+
     }
-    
-    .hero__stats {
-        flex-direction: column;
-        gap: 2.5rem;
-        align-items: center;
+
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width:360px){
+
+    .hero__stats{
+
+        gap:1.5rem;
+
     }
+
 }

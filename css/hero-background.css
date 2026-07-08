@@ -2,7 +2,7 @@
 /* hero-background.css - Background Layers Only */
 
 .hero {
-    background: #071B36;
+    background: #DCEAF5;
     position: relative;
     overflow: hidden;
 }
@@ -18,10 +18,11 @@
 .hero__glow-layer {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 35% 45%, 
-                rgba(0, 194, 255, 0.18) 0%, 
-                transparent 65%);
-    opacity: 0.75;
+        radial-gradient(circle at 28% 35%,
+        rgba(255,255,255,.55) 0%,
+        transparent 55%);
+
+    opacity: .9;
 }
 
 /* Grid Layer */
@@ -29,8 +30,8 @@
     position: absolute;
     inset: 0;
     background-image: 
-        linear-gradient(rgba(110,170,255,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    linear-gradient(rgba(30,70,110,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,70,110,.06) 1px, transparent 1px);
     background-size: 72px 72px;
     opacity: 0.45;
 }
@@ -40,10 +41,12 @@
     position: absolute;
     inset: 0;
     background: 
-        radial-gradient(circle at 22% 28%, rgba(0,180,255,.10) 0%, transparent 45%),
-        radial-gradient(circle at 68% 65%, rgba(0,230,255,.08) 0%, transparent 50%),
-        radial-gradient(circle at 45% 82%, rgba(70,220,255,.07) 0%, transparent 48%);
-    opacity: 0.65;
+     radial-gradient(circle at 20% 25%, rgba(255,255,255,.35) 0%, transparent 35%),
+
+     radial-gradient(circle at 75% 60%, rgba(240,162,67,.18) 0%, transparent 40%),
+
+     radial-gradient(circle at 45% 80%, rgba(255,255,255,.25) 0%, transparent 40%);
+    opacity: 0.35;
 }
 
 /* Depth Enhancement */
@@ -53,10 +56,10 @@
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(7,17,31,.45) 0%,
-        transparent 40%,
-        transparent 70%,
-        rgba(7,17,31,.40) 100%
+rgba(255,255,255,.45) 0%,
+transparent 30%,
+transparent 70%,
+rgba(255,255,255,.25) 100%);
     );
     z-index: 2;
     pointer-events: none;

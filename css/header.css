@@ -32,9 +32,15 @@
 
 /* HEADER CONTAINER */
 .header__container {
+/*box-sizing:border-box;*/
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 1.1rem 2.5rem;
+    margin-inline:auto;
+
+    width:100%;
+
+    padding-block: clamp(12px, 1.2vw, 16px);
+
+    padding-inline:clamp(20px,4vw,64px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,21 +50,22 @@
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap:clamp(8px,1vw,12px);
 }
 
 .brand__logo {
     background: var(--primary-blue);
     color: white;
-    font-size: 1.65rem;
+    font-size:clamp(1.35rem,2vw,1.65rem);
     font-weight: 800;
-    padding: 6px 14px;
+    padding-block: clamp(6px, 0.6vw, 8px);
+    padding-inline: clamp(12px, 1vw, 16px);
     border-radius: 8px;
     letter-spacing: -0.04em;
 }
 
 .brand__name {
-    font-size: 0.95rem;
+    font-size:clamp(.82rem,1vw,.95rem);
     font-weight: 600;
     color: var(--text-dark);
     letter-spacing: -0.01em;
@@ -68,7 +75,7 @@
 /* NAVIGATION */
 .nav__list {
     display: flex;
-    gap: 2.8rem;
+    gap:clamp(1.2rem,2vw,2.8rem);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -77,9 +84,9 @@
 .nav__link {
     position: relative;
     font-weight: 500;
-    color: var(--text-dark);
+    color: #334155;
     transition: var(--transition);
-    padding-bottom: 4px;
+    padding-bottom:clamp(3px,.4vw,5px);
 }
 
 .nav__link:after {
@@ -89,7 +96,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-teal);
+    background: #F58A07;
     transition: var(--transition);
 }
 
@@ -104,20 +111,36 @@
     gap: 1.2rem;
 }
 
-.btn--primary {
-    background: var(--accent-teal);
-    color: white;
-    padding: 12px 32px;
-    border-radius: var(--radius);
-    font-weight: 600;
-    font-size: 0.97rem;
-    transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(0, 212, 200, 0.25);
+.header__btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    height:44px;
+
+    padding:0 22px;
+
+    border-radius:999px;
+
+    background:#FFFFFF;
+
+    color:#F58A07;
+
+    border:1px solid #D9E3EC;
+
+    text-decoration:none;
+
+    font-size:.95rem;
+    font-weight:600;
+
+    transition:.25s ease;
+
 }
 
-.btn--primary:hover {
+.header__btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 212, 200, 0.35);
+    box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.15);
 }
 
 /* MOBILE TOGGLE */
@@ -154,15 +177,35 @@
 .hamburger::after { bottom: -7px; }
 
 /* RESPONSIVE */
-@media (max-width: 1024px) {
-    .nav__list {
-        gap: 2rem;
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 992px) {
+
+    .header__container {
+        padding-inline: 32px;
     }
+
+    .header__actions {
+        gap: 1rem;
+    }
+
+    .nav__list {
+        gap: 1.5rem;
+    }
+
+    .brand__name {
+        font-size: 0.85rem;
+    }
+
 }
 
 @media (max-width: 768px) {
     .header__container {
-        padding: 1rem 1.5rem;
+        padding: 0.7rem 20px;
     }
     
     .nav__list {
@@ -176,6 +219,68 @@
     .brand__name {
         display: none;
     }
+}
+
+/* ==========================
+   TABLET NAVIGATION
+========================== */
+
+@media (max-width:1000px){
+
+    .nav__list{
+        display:none;
+    }
+
+    .header__mobile-toggle{
+        display:block;
+    }
+
+}
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    .header__container {
+        padding-inline: 24px;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .header__mobile-toggle {
+        display: block;
+    }
+
+    .brand__name {
+        display: none;
+    }
+
+    .header__actions {
+        gap: 0.75rem;
+    }
+
+}
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 576px) {
+
+    .header__container {
+        padding-inline: 20px;
+    }
+
+    .brand__logo {
+        font-size: 1.25rem;
+    }
+
+    .header__btn {
+        padding-inline: 18px;
+    }
+
 }
 /* تمام لینک‌های هدر */
 .header a{
@@ -191,5 +296,26 @@
 
 /* هنگام Hover */
 .nav__link:hover{
-    color:#00CFC8;
+    color:#F58A07;
+}
+@media (max-width: 1500px){
+
+    .header__btn{
+
+        padding-inline:18px;
+
+        font-size:.92rem;
+
+    }
+
+}
+
+@media (max-width:1382px){
+
+    .header__btn{
+
+        display:none;
+
+    }
+
 }
