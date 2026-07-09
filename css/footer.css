@@ -1,0 +1,195 @@
+/* Footer */
+.footer {
+    background: #0F172A;
+    color: #E2E8F0;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* Container */
+.footer__container {
+    max-width: 1280px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: clamp(24px, 4vw, 40px);
+}
+
+/* Grid */
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1fr 1fr 1.4fr;
+    gap: 48px 40px;
+}
+
+/* Brand Column */
+.footer__column--brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.footer__logo-text {
+    background: #0A2540;
+    color: white;
+    font-size: 1.65rem;
+    font-weight: 800;
+    padding: 8px 16px;
+    border-radius: 8px;
+    letter-spacing: -0.04em;
+}
+
+.footer__description {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #F1F5F9;
+    margin-bottom: 12px;
+}
+
+.footer__mission {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #94A3B8;
+    max-width: 280px;
+}
+
+/* Column Titles */
+.footer__column-title {
+    color: #F8FAFC;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+}
+
+/* Navigation Links */
+.footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__links a {
+    color: #94A3B8;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    font-size: 0.95rem;
+}
+
+.footer__links a:hover {
+    color: #F58A07;
+    transform: translateX(4px);
+}
+
+/* Contact Column */
+.footer__contact {
+    font-style: normal;
+}
+
+.footer__center-name {
+    color: #F1F5F9;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.footer__email {
+    color: #94A3B8;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer__email:hover {
+    color: #F58A07;
+}
+
+/* Social Links */
+.footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer__social a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.footer__social a:hover {
+    color: #F58A07;
+}
+
+/* Footer Bottom */
+.footer__bottom {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer__copyright {
+    color: #64748B;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+    .footer__grid {
+        gap: 40px 32px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 40px;
+    }
+    
+    .footer__column--brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 64px;
+        padding-bottom: 32px;
+    }
+    
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer__mission {
+        max-width: 100%;
+    }
+    
+    .footer__bottom {
+        margin-top: 48px;
+        padding-top: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer__container {
+        padding-inline: 20px;
+    }
+    
+    .footer__social {
+        gap: 16px;
+    }
+}
